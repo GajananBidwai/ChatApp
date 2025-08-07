@@ -6,13 +6,22 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		855200BBC9729C1809306138 /* Pods_ChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A3E33105D7BA53D1975A27 /* Pods_ChatApp.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		01A040FC82257B0039C3BB2D /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
+		72A3E33105D7BA53D1975A27 /* Pods_ChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92306A2F2E449153001159FA /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		965E64F9B2ED5EC1365EAF33 /* Pods-ChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.release.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		92306A312E449153001159FA /* ChatApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = ChatApp;
 			sourceTree = "<group>";
 		};
@@ -23,17 +32,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				855200BBC9729C1809306138 /* Pods_ChatApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7ED1058ABA7664DDEC08BDC3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72A3E33105D7BA53D1975A27 /* Pods_ChatApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		92306A262E449153001159FA = {
 			isa = PBXGroup;
 			children = (
 				92306A312E449153001159FA /* ChatApp */,
 				92306A302E449153001159FA /* Products */,
+				A897B69DF58B0BBEF07B779D /* Pods */,
+				7ED1058ABA7664DDEC08BDC3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -45,6 +65,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		A897B69DF58B0BBEF07B779D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				01A040FC82257B0039C3BB2D /* Pods-ChatApp.debug.xcconfig */,
+				965E64F9B2ED5EC1365EAF33 /* Pods-ChatApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -52,9 +82,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92306A3A2E449155001159FA /* Build configuration list for PBXNativeTarget "ChatApp" */;
 			buildPhases = (
+				168D7DC2964A90720DE35796 /* [CP] Check Pods Manifest.lock */,
 				92306A2B2E449153001159FA /* Sources */,
 				92306A2C2E449153001159FA /* Frameworks */,
 				92306A2D2E449153001159FA /* Resources */,
+				3045C67EDB095B35B6D949FA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -64,8 +96,6 @@
 				92306A312E449153001159FA /* ChatApp */,
 			);
 			name = ChatApp;
-			packageProductDependencies = (
-			);
 			productName = ChatApp;
 			productReference = 92306A2F2E449153001159FA /* ChatApp.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +143,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		168D7DC2964A90720DE35796 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChatApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3045C67EDB095B35B6D949FA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChatApp/Pods-ChatApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChatApp/Pods-ChatApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChatApp/Pods-ChatApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		92306A2B2E449153001159FA /* Sources */ = {
@@ -248,6 +320,7 @@
 		};
 		92306A3B2E449155001159FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01A040FC82257B0039C3BB2D /* Pods-ChatApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -276,6 +349,7 @@
 		};
 		92306A3C2E449155001159FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 965E64F9B2ED5EC1365EAF33 /* Pods-ChatApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
